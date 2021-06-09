@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8oZ-bi-ewF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MapVC-->
+        <scene sceneID="e3h-eN-6vx">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" id="8oZ-bi-ewF" customClass="MapVC" customModule="DemoTeamX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="URK-Az-vyg" customClass="MapView" customModule="DemoTeamX" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1t1-R7-4sZ">
+                                <rect key="frame" x="0.0" y="89" width="375" height="533"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XyT-1l-RuJ">
+                                <rect key="frame" x="10" y="60" width="208.5" height="29"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8r-Dc-7Jp">
+                                <rect key="frame" x="218.5" y="60" width="146.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Get Diraction"/>
+                                <connections>
+                                    <action selector="getDirectionTapped:" destination="8oZ-bi-ewF" eventType="touchUpInside" id="Rze-hi-Amc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAA-qn-ew4">
+                                <rect key="frame" x="0.0" y="622" width="375" height="45"/>
+                                <color key="backgroundColor" red="0.33333334329999997" green="0.14203659499999999" blue="6.408408081e-05" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="log out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutTapped:" destination="8oZ-bi-ewF" eventType="touchUpInside" id="33k-SG-zhv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I8r-Dc-7Jp" firstAttribute="leading" secondItem="XyT-1l-RuJ" secondAttribute="trailing" id="7LH-gu-Fcc"/>
+                            <constraint firstItem="1t1-R7-4sZ" firstAttribute="top" secondItem="XyT-1l-RuJ" secondAttribute="bottom" id="D6g-C6-YAM"/>
+                            <constraint firstItem="jAA-qn-ew4" firstAttribute="leading" secondItem="tua-BZ-6gM" secondAttribute="leading" id="IHM-tb-6ze"/>
+                            <constraint firstItem="XyT-1l-RuJ" firstAttribute="height" secondItem="URK-Az-vyg" secondAttribute="height" multiplier="29/667" id="T98-BX-aJ2"/>
+                            <constraint firstItem="I8r-Dc-7Jp" firstAttribute="centerY" secondItem="XyT-1l-RuJ" secondAttribute="centerY" id="Tyc-oK-0s2"/>
+                            <constraint firstItem="XyT-1l-RuJ" firstAttribute="leading" secondItem="tua-BZ-6gM" secondAttribute="leading" constant="10" id="UcB-eH-6qT"/>
+                            <constraint firstItem="XyT-1l-RuJ" firstAttribute="leading" secondItem="tua-BZ-6gM" secondAttribute="leading" constant="10" id="Yls-id-iu8"/>
+                            <constraint firstItem="tua-BZ-6gM" firstAttribute="bottom" secondItem="jAA-qn-ew4" secondAttribute="bottom" id="doq-Xg-NrQ"/>
+                            <constraint firstItem="XyT-1l-RuJ" firstAttribute="width" secondItem="URK-Az-vyg" secondAttribute="width" multiplier="180/324" id="fGG-dU-4qm"/>
+                            <constraint firstItem="XyT-1l-RuJ" firstAttribute="top" secondItem="URK-Az-vyg" secondAttribute="top" constant="60" id="hkf-Zf-Ggu"/>
+                            <constraint firstItem="tua-BZ-6gM" firstAttribute="trailing" secondItem="I8r-Dc-7Jp" secondAttribute="trailing" constant="10" id="iLj-KO-N3b"/>
+                            <constraint firstItem="1t1-R7-4sZ" firstAttribute="trailing" secondItem="tua-BZ-6gM" secondAttribute="trailing" id="jCm-Sd-hwe"/>
+                            <constraint firstItem="jAA-qn-ew4" firstAttribute="top" secondItem="1t1-R7-4sZ" secondAttribute="bottom" id="n5A-9z-bjL"/>
+                            <constraint firstItem="1t1-R7-4sZ" firstAttribute="leading" secondItem="tua-BZ-6gM" secondAttribute="leading" id="nU3-UN-wSU"/>
+                            <constraint firstItem="I8r-Dc-7Jp" firstAttribute="height" secondItem="XyT-1l-RuJ" secondAttribute="height" id="nUF-6z-ka2"/>
+                            <constraint firstItem="tua-BZ-6gM" firstAttribute="trailing" secondItem="jAA-qn-ew4" secondAttribute="trailing" id="qoE-x5-qzE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tua-BZ-6gM"/>
+                        <connections>
+                            <outlet property="addressTxt" destination="XyT-1l-RuJ" id="cKd-eN-s2I"/>
+                            <outlet property="getDirectionBtn" destination="I8r-Dc-7Jp" id="vlY-Yo-vDd"/>
+                            <outlet property="logoutBtn" destination="jAA-qn-ew4" id="yeZ-59-4lR"/>
+                            <outlet property="map" destination="1t1-R7-4sZ" id="8IS-9t-mMA"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="cV5-fW-8eH"/>
+                    <connections>
+                        <outlet property="mapView" destination="URK-Az-vyg" id="FXr-nu-0At"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Uu-Ve-1En" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034.4000000000001" y="95.802098950524751"/>
+        </scene>
+    </scenes>
+</document>
